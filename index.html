@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Conversor</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-ligth navbar-contenedor">
+            <div class="container">
+                <a class="navbar-brand navbar-home text-white" href="#">Home</a>
+                <a class="nav-link text-white" href="#">Ver cotización</a>
+            </div>
+        </nav>
+    </header>
+    <main class="container">
+        <div class="d-flex flex-column flex-md-row justify-content-around mt-5">
+            <div class="d-flex flex-column justify-content-center">
+                <h1 class="text-center mt-5">Dólar HOY:</h1>
+                <div class="mx-auto px-auto bg-light border border-5 fs-1 text-center mt-3" style="width: 200px;">
+                    <p>$<span id="valorDolar"></span></p>
+                </div>
+                <div class="container d-flex justify-content-center mt-3">
+                    <p>Ultima actualización: <span id="fecha">hh:mm:ss</span></p>
+                </div>
+            </div>
+            <div class="d-flex flex-column justify-content-center">
+                <form class="bg-success p-4" id="formulario">
+                    <div class="form-group">
+                        <label class="text-white" for="monto">Monto</label>
+                        <input type="number" name="" id="monto" class="form-control mt-2" required>
+                    </div>
+                    <div class="form-group mt-2">
+                        <label for="divisa" class="text-white">Elija qué tipo de conversión</label>
+                        <select class="form-control mt-2" name="" id="divisa">
+                            <option value="1">Dólar a Peso</option>
+                            <option value="2">Peso a Dólar</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary mt-3 text-uppercase">Convertir</button>
+                </form>
+                <p class="bg-light p-2 border border-4 fs-4 text-center mt-3">Total:$<span id="montoTotal">0</span></p>
+            </div>
+        </div>
+    </main>
+    <footer>
+
+    </footer>
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <!-- Script JS -->
+    <script src="./js/main.js"></script>
+</body>
+</html>
